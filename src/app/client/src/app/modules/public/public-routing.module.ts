@@ -8,7 +8,7 @@ import {
   PublicCollectionPlayerComponent
 } from './components';
 import { SignupGuard, LandingpageGuard } from './services';
-import { MankindComponent } from './module/mankind';
+import { MankindComponent, AboutusComponent } from './module/mankind';
 
 const routes: Routes = [
   {
@@ -68,6 +68,13 @@ const routes: Routes = [
     path: 'mankind', component: MankindComponent, data: {
       telemetry: {
         env: 'public', pageid: 'mankind', type: 'view', subtype: 'paginate'
+      }
+    }
+  },
+  {
+    path: 'aboutus', component: AboutusComponent, data: {
+      telemetry: {
+        env: 'public', pageid: 'aboutus', type: 'view', subtype: 'paginate'
       }
     }
   }
