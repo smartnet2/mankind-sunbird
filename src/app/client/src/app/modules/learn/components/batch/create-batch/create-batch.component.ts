@@ -13,9 +13,9 @@ import { Subject, combineLatest } from 'rxjs';
   selector: 'app-create-batch',
   templateUrl: './create-batch.component.html',
   styleUrls: ['./create-batch.component.css'],
-  /* #NUIH change: Starts here */
+  /* #MANKIND change: Starts here */
   encapsulation: ViewEncapsulation.None
-  /* #NUIH change: Ends here*/
+  /* #MANKIND change: Ends here*/
 })
 export class CreateBatchComponent implements OnInit, OnDestroy {
 

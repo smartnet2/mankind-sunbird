@@ -1,0 +1,6 @@
+.hidden-section {
+    display: none;
+}
+ul li {
+    margin-bottom: 0 !important;
+}

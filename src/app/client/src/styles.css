@@ -47,7 +47,7 @@
   color: #007AFF;
 }
 /* cards used in slider fonts*/
-/* #NUIH change: */
+/* #MANKIND change: */
 .sliderCardHeading {
   font-family: "Raleway", sans-serif !important;
   font-size: 13px;
@@ -456,7 +456,7 @@
   color: #007AFF !important;
   text-shadow: none !important;
 }
-/* #NUIH change Starts Here: */
+/* #MANKIND change Starts Here: */
 h4.ui.header.sectionHeading {
     font-size: 1.375em;
     color: #0c2e8a !important;
@@ -467,7 +467,7 @@ h4.ui.header.sectionHeading {
   border-color: #0c2e8a!important;
   color: #fff!important;
 }
-/* #NUIH change Ends Here: */
+/* #MANKIND change Ends Here: */
 a {
   outline: none !important;
 }
@@ -523,9 +523,9 @@ a:hover {
 .ui.secondary.pointing.menu .active.item {
   border-color: #007AFF;
   color: #333333;
-  /* #NUIH changes for styles*/
+  /* #MANKIND changes for styles*/
   font-family: "Raleway", sans-serif !important;
-  /* #NUIH changes for styles*/
+  /* #MANKIND changes for styles*/
 }
 .ui.secondary.pointing.menu {
   background: #fdfdfd;

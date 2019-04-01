@@ -18,8 +18,8 @@ import { NgInviewModule } from 'angular-inport';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { BadgingModule } from '@sunbird/badge';
-// #NUIH change: Imported NuihModule
-import { NuihModule } from './module/nuih';
+// #MANKIND change: Imported MankindModule
+import { MankindModule } from './module/mankind';
 @NgModule({
   imports: [
     CommonModule,
@@ -33,8 +33,8 @@ import { NuihModule } from './module/nuih';
     NgInviewModule,
     DeviceDetectorModule,
     BadgingModule,
-    // #NUIH change: Imported NuihModule
-    NuihModule
+    // #MANKIND change: Imported MankindModule
+    MankindModule
   ],
   declarations: [LandingPageComponent, SignupComponent, GetComponent, DialCodeComponent,
     PublicFooterComponent, PublicContentPlayerComponent, PublicCollectionPlayerComponent],
