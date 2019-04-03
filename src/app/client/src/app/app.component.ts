@@ -110,6 +110,8 @@ export class AppComponent implements OnInit {
     // #MANKIND change: Hide main header for Nuih Page
     this.showMainHeader = _.indexOf(_.split(window.location.href, '/'), 'mankind') > -1
       || _.indexOf(_.split(window.location.href, '/'), 'aboutus') > -1
+      || _.indexOf(_.split(window.location.href, '/'), 'dashboardmr') > -1
+      || _.indexOf(_.split(window.location.href, '/'), 'dashboardrm') > -1
       || _.indexOf(_.split(window.location.href, '/'), 'comingsoon') > -1 ?
       false : true;
   }

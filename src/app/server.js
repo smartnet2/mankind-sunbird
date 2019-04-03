@@ -43,7 +43,7 @@ let cassandraCP = envHelper.PORTAL_CASSANDRA_URLS
 const oneDayMS = 86400000;
 const request = require('request');
 const ejs = require('ejs');
-const packageObj = JSON.parse(fs.readFileSync(path.join(__dirname,'package.json'), 'utf8'));
+const packageObj = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json'), 'utf8'));
 const MobileDetect = require('mobile-detect');
 let memoryStore = null
 let defaultTenantIndexStatus = 'false';
@@ -102,7 +102,7 @@ app.all(['/server.js', '/helpers/*.js', '/helpers/**/*.js'], function (req, res)
 })
 
 app.post('/custom/v1/write/email', bodyParser.urlencoded({ extended: false }),
-bodyParser.json({ limit: '10mb' }),customServiceHelper.verifyAndStoreEmail)
+  bodyParser.json({ limit: '10mb' }), customServiceHelper.verifyAndStoreEmail)
 
 // this line should be above middleware please don't change
 app.get('/public/service/orgs', publicServicehelper.getOrgs)
@@ -118,9 +118,9 @@ app.use(express.static(path.join(__dirname, 'dist'), { extensions: ['ejs'], inde
 
 // Announcement routing
 app.use('/announcement/v1', bodyParser.urlencoded({ extended: false }),
-  bodyParser.json({ limit: '10mb' }),require('./helpers/announcement')(keycloak))
+  bodyParser.json({ limit: '10mb' }), require('./helpers/announcement')(keycloak))
 
-  app.use('/discussions/v1', bodyParser.urlencoded({ extended: false }),
+app.use('/discussions/v1', bodyParser.urlencoded({ extended: false }),
   bodyParser.json({ limit: '10mb' }), require('./helpers/discussion')(keycloak))
 
 
@@ -208,6 +208,8 @@ app.all('/explore', indexPage)
 app.all('/explore/*', indexPage)
 app.all('/mankind', indexPage)
 app.all('/aboutus', indexPage)
+app.all('/dashboardmr', keycloak.protect(), indexPage)
+app.all('/dashboardrm', keycloak.protect(), indexPage)
 app.all('/comingsoon', indexPage)
 app.all(['/groups', '/groups/*'], keycloak.protect(), indexPage)
 app.all('/play/*', indexPage)
@@ -484,9 +486,9 @@ function endSession(request, response, next) {
   if (request.session) {
     if (_.get(request, 'kauth.grant.access_token.content.sub')) { telemetryHelper.logSessionEnd(request) }
 
-      request.session.sessionEvents = request.session.sessionEvents || []
-      delete request.session.sessionEvents
-      delete request.session['deviceId']
+    request.session.sessionEvents = request.session.sessionEvents || []
+    delete request.session.sessionEvents
+    delete request.session['deviceId']
   }
   next()
 }
@@ -535,7 +537,3 @@ const telemetryConfig = {
 }
 
 telemetry.init(telemetryConfig)
-
-
-
-

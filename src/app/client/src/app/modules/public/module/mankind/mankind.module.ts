@@ -6,7 +6,7 @@ import { TelemetryModule } from '@sunbird/telemetry';
 import { CoreModule } from '@sunbird/core';
 import { SharedModule } from '@sunbird/shared';
 import { NgInviewModule } from 'angular-inport';
-import { MankindComponent, AboutusComponent } from './components';
+import { MankindComponent, AboutusComponent, DashboardMR, DashboardRegionalSalesManager } from './components';
 import { EmailInputComponent } from './common/components/email-input/email-input.component';
 import { WriteEmailService } from './common/services/email-input/email-input.service';
 import { EmailService } from './common/services/email/email.service';
@@ -21,7 +21,7 @@ import { DataService } from '../../../core/services/data/data.service';
     SharedModule,
     NgInviewModule
   ],
-  declarations: [MankindComponent, AboutusComponent, EmailInputComponent],
+  declarations: [MankindComponent, AboutusComponent, DashboardMR, DashboardRegionalSalesManager, EmailInputComponent],
   providers: [DataService, EmailService, WriteEmailService]
 })
 export class MankindModule { }
