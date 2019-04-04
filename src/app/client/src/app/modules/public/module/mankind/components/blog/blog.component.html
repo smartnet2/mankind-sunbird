@@ -214,8 +214,11 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
+                                    <a class="dropdown-item" href="/blog">Blog</a>
+                                    <a class="dropdown-item" href="/dashboardrm" *ngIf="userProfile?.firstName == 'Content'">Dashboard</a>
+                                    <a class="dropdown-item" href="/dashboardmr" *ngIf="userProfile?.firstName == 'Test'">Dashboard</a>
+                                    <a class="dropdown-item" href="/profile">Profile</a>
                                     <a class="dropdown-item scroll" href="javascript:" (click)="logout()">Log Out</a>
-                                    <a class="dropdown-item" href="javascript:">Profile</a>
                                 </div>
                             </li>
 

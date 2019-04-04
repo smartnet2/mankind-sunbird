@@ -28,13 +28,15 @@
                     <div *ngIf='userProfile' class="item headerDropdownProfile">{{userProfile?.firstName}}&nbsp;{{userProfile?.lastName}}</div>
                     <div *ngIf='userProfile' class="ui divider"></div>
 
+                    <a class="item" routerLink="blog">Blog</a>
+                    <!-- <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='adminDashboard' routerLink="orgDashboard">{{resourceService.frmelmnts?.lnk?.dashboard}}</a> -->
+                    <!-- <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='announcementRole' routerLink="announcement/outbox/1">{{resourceService.frmelmnts?.lnk?.announcement}}</a> -->
+                    <!-- <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='workSpaceRole' (click)="navigateToWorkspace()">{{resourceService.frmelmnts?.lnk?.workSpace}}</a> -->
+                    <!-- <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='myActivityRole' routerLink="myActivity">{{resourceService.frmelmnts?.lnk?.myactivity}}</a> -->
+                    <!-- <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='orgSetupRole' routerLink="orgType">{{resourceService.frmelmnts?.lbl?.orgtypes}}</a> -->
+                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='workSpaceRole' routerLink="dashboardrm"  >{{resourceService.frmelmnts?.lnk?.dashbord}}</a>
+                    <a class="item" *ngIf='!permissionService.permissionAvailable' appPermission [permission]='workSpaceRole' routerLink="dashboardmr"  >{{resourceService.frmelmnts?.lnk?.dashbord}}</a>
                     <a class="item" routerLink="profile">{{resourceService.frmelmnts?.lnk?.profile}}</a>
-                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='adminDashboard' routerLink="orgDashboard">{{resourceService.frmelmnts?.lnk?.dashboard}}</a>
-                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='announcementRole' routerLink="announcement/outbox/1">{{resourceService.frmelmnts?.lnk?.announcement}}</a>
-                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='workSpaceRole' (click)="navigateToWorkspace()">{{resourceService.frmelmnts?.lnk?.workSpace}}</a>
-                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='myActivityRole' routerLink="myActivity">{{resourceService.frmelmnts?.lnk?.myactivity}}</a>
-                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='orgSetupRole' routerLink="orgType">{{resourceService.frmelmnts?.lbl?.orgtypes}}</a>
-                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='workSpaceRole' routerLink="grafana"  >{{resourceService.frmelmnts?.lnk?.dashbord}}</a>
                     <a class="item" (click)="logout()">{{resourceService.frmelmnts?.lnk?.logout}}</a>
 
                 </div>

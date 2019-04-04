@@ -1,7 +1,8 @@
 import { combineLatest as observableCombineLatest } from 'rxjs';
-import { PageApiService, PlayerService, ISort, OrgDetailsService } from '@sunbird/core';
+import { PageApiService, PlayerService, ISort, OrgDetailsService, UserService } from '@sunbird/core';
 import { PublicPlayerService } from '../../../../services';
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import {
   ResourceService, ToasterService, INoResultMessage,
   ConfigService, UtilService, NavigationHelperService
@@ -13,6 +14,7 @@ import { IInteractEventEdata, IImpressionEventInput } from '@sunbird/telemetry';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs/Subject';
 import { CacheService } from 'ng2-cache-service';
+import { IUserProfile, IUserData } from '@sunbird/shared';
 @Component({
   selector: 'app-dashboard-regional-sales-manager',
   templateUrl: './dashboard-regional-sales-manager.component.html',
@@ -46,9 +48,11 @@ export class DashboardRegionalSalesManager implements OnInit, OnDestroy {
   * To show / hide no result message when no result found
  */
   noResult = false;
+  userProfile: IUserProfile;
   /**
   * no result  message
  */
+  public userService: UserService;
   noResultMessage: INoResultMessage;
   /**
   * Contains result object returned from getPageData API.
@@ -72,6 +76,7 @@ export class DashboardRegionalSalesManager implements OnInit, OnDestroy {
   inviewLogs = [];
   filterIntractEdata: IInteractEventEdata;
   sortIntractEdata: IInteractEventEdata;
+  userDataSubscription: Subscription;
   /**
    * The "constructor"
    *
@@ -81,9 +86,10 @@ export class DashboardRegionalSalesManager implements OnInit, OnDestroy {
   constructor(pageSectionService: PageApiService, toasterService: ToasterService, private playerService: PlayerService,
     resourceService: ResourceService, config: ConfigService, private activatedRoute: ActivatedRoute, router: Router,
     public utilService: UtilService, public navigationHelperService: NavigationHelperService,
-    orgDetailsService: OrgDetailsService, private publicPlayerService: PublicPlayerService, private cacheService: CacheService) {
+    orgDetailsService: OrgDetailsService, userService: UserService, private publicPlayerService: PublicPlayerService, private cacheService: CacheService) {
     this.pageSectionService = pageSectionService;
     this.toasterService = toasterService;
+    this.userService = userService;
     this.resourceService = resourceService;
     this.orgDetailsService = orgDetailsService;
     this.config = config;
@@ -229,6 +235,12 @@ export class DashboardRegionalSalesManager implements OnInit, OnDestroy {
         }
       });
     });
+    this.userDataSubscription = this.userService.userData$.subscribe(
+      (user: IUserData) => {
+        if (user && !user.err) {
+          this.userProfile = user.userProfile;
+        }
+      });
   }
 
   prepareVisits(event) {
@@ -311,10 +323,10 @@ export class DashboardRegionalSalesManager implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
+    this.userDataSubscription.unsubscribe();
   }
   logout() {
     window.location.replace('/logoff');
     this.cacheService.removeAll();
   }
-
 }
