@@ -1,0 +1,15 @@
+.hidden-section {
+    display: none;
+}
+
+ul li {
+    margin-bottom: 0 !important;
+}
+
+a.text-dark:hover, a.text-dark:focus {
+    color: #FFFFFF !important;
+}
+
+textarea {
+    resize: none;
+}

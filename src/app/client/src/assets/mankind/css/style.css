@@ -2994,3 +2994,61 @@ ul.nav.nav-tabs li.active a.smll-tab {
     font-size: 30px;
     font-weight: 600;
 }
+
+.mr-2, .mx-2 {
+    float: left;
+}
+
+.btn {
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+
+.btn-read-more {
+    padding: 5px 5px 5px 0;
+    text-align: center;
+    border-radius: 0px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    color: #662D91;
+}
+
+.btn-read-more:hover {
+    color: #662D91;
+}
+
+.post {
+    border-bottom: 1px solid #DDD
+}
+
+.post-title {
+    color: #662D91;
+}
+
+.post .glyphicon {
+    margin-right: 5px;
+}
+
+.post-header-line {
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    padding: 5px 0px 5px 0px;
+    font-size: 12px;
+}
+
+.post-content {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.row .post-content {
+    border: none!important;
+}
+
+.fa:before {
+    color: #000000!important;
+}
