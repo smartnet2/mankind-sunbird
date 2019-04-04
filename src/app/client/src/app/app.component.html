@@ -1,4 +1,5 @@
 <!-- #MANKIND change: Hided the main header for nuih module -->
 <app-header *ngIf="showMainHeader"></app-header>
+<div *ngIf="showMainHeader" class="inner-banner-w3ls"></div>
 <app-breadcrumbs *ngIf="userService.loggedIn"></app-breadcrumbs>
 <router-outlet *ngIf="initApp"></router-outlet>

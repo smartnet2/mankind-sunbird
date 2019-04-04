@@ -12,6 +12,7 @@ import * as _ from 'lodash';
 import { IInteractEventEdata, IImpressionEventInput } from '@sunbird/telemetry';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs/Subject';
+import { CacheService } from 'ng2-cache-service';
 @Component({
   selector: 'app-dashboard-regional-sales-manager',
   templateUrl: './dashboard-regional-sales-manager.component.html',
@@ -80,7 +81,7 @@ export class DashboardRegionalSalesManager implements OnInit, OnDestroy {
   constructor(pageSectionService: PageApiService, toasterService: ToasterService, private playerService: PlayerService,
     resourceService: ResourceService, config: ConfigService, private activatedRoute: ActivatedRoute, router: Router,
     public utilService: UtilService, public navigationHelperService: NavigationHelperService,
-    orgDetailsService: OrgDetailsService, private publicPlayerService: PublicPlayerService) {
+    orgDetailsService: OrgDetailsService, private publicPlayerService: PublicPlayerService, private cacheService: CacheService) {
     this.pageSectionService = pageSectionService;
     this.toasterService = toasterService;
     this.resourceService = resourceService;
@@ -311,4 +312,9 @@ export class DashboardRegionalSalesManager implements OnInit, OnDestroy {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
   }
+  logout() {
+    window.location.replace('/logoff');
+    this.cacheService.removeAll();
+  }
+
 }
