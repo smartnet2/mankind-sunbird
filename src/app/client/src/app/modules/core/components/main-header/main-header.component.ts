@@ -154,7 +154,8 @@ export class MainHeaderComponent implements OnInit, OnDestroy {
   navigateToWorkspace() {
     const authroles = this.permissionService.getWorkspaceAuthRoles();
     if (authroles) {
-      this.router.navigate([authroles.url]);
+      // this.router.navigate([authroles.url]);
+      window.location.href = '/' + authroles.url;
     }
   }
   navigateToHome() {

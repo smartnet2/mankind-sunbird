@@ -3,14 +3,14 @@
         <div class="one wide tablet computer only column"></div>
         <div class="two wide tablet computer only column" [class.padding-top-15]="userService.userid">
             <a (click)="navigateToHome()">
-                <img [class.header-logo-before-login]="!userService.userid" [class.header-logo]="userService.userid" class="image centered"
-                    alt={{tenantName}} src="{{logo}}">
+                <img [class.header-logo-before-login]="!userService.userid" [class.header-logo]="userService.userid"
+                    class="image centered" alt={{tenantName}} src="{{logo}}">
             </a>
         </div>
         <div class="two wide mobile only column padding-left-25 padding-top-5">
             <a (click)="navigateToHome()">
-                <img [class.header-logo-before-login]="!userService.userid" [class.header-logo]="userService.userid" class="image centered"
-                    alt={{tenantName}} src="{{logo}}">
+                <img [class.header-logo-before-login]="!userService.userid" [class.header-logo]="userService.userid"
+                    class="image centered" alt={{tenantName}} src="{{logo}}">
             </a>
         </div>
         <div class="six wide column padding-top-1rem" *ngIf="userService.userid">
@@ -22,20 +22,33 @@
             <i class="float-ContentLeft alarm-icon-header alarm icon large alaramIconColor"></i>
             <div suiDropdown [(isOpen)]="isOpen" class="ui floating dropdown right top pointing
                 header-user-container padding-top-circular-human-icon" id="dropdown-menu-list-header">
-                <img src="{{ userProfile?.avatar || 'assets/images/user_logo.png' | cdnprefixurl}}" class="ui circular image logged-in-user"
-                />
+                <img src="{{ userProfile?.avatar || 'assets/images/user_logo.png' | cdnprefixurl}}"
+                    class="ui circular image logged-in-user" />
                 <div class="menu" suiDropdownMenu>
-                    <div *ngIf='userProfile' class="item headerDropdownProfile">{{userProfile?.firstName}}&nbsp;{{userProfile?.lastName}}</div>
+                    <div *ngIf='userProfile' class="item headerDropdownProfile">
+                        {{userProfile?.firstName}}&nbsp;{{userProfile?.lastName}}</div>
                     <div *ngIf='userProfile' class="ui divider"></div>
 
                     <a class="item" href="/blog">Blog</a>
-                    <!-- <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='adminDashboard' routerLink="orgDashboard">{{resourceService.frmelmnts?.lnk?.dashboard}}</a> -->
-                    <!-- <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='announcementRole' routerLink="announcement/outbox/1">{{resourceService.frmelmnts?.lnk?.announcement}}</a> -->
-                    <!-- <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='workSpaceRole' (click)="navigateToWorkspace()">{{resourceService.frmelmnts?.lnk?.workSpace}}</a> -->
-                    <!-- <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='myActivityRole' routerLink="myActivity">{{resourceService.frmelmnts?.lnk?.myactivity}}</a> -->
-                    <!-- <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='orgSetupRole' routerLink="orgType">{{resourceService.frmelmnts?.lbl?.orgtypes}}</a> -->
-                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission [permission]='workSpaceRole' href="/dashboardrm"  >{{resourceService.frmelmnts?.lnk?.dashbord}}</a>
-                    <a class="item" *ngIf="userProfile?.firstName == 'Test'" href="/dashboardmr"  >{{resourceService.frmelmnts?.lnk?.dashbord}}</a>
+                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission
+                        [permission]='adminDashboard'
+                        href="/orgDashboard">{{resourceService.frmelmnts?.lnk?.dashboard}}</a>
+                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission
+                        [permission]='announcementRole'
+                        href="/announcement/outbox/1">{{resourceService.frmelmnts?.lnk?.announcement}}</a>
+                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission
+                        [permission]='workSpaceRole'
+                        (click)="navigateToWorkspace()">{{resourceService.frmelmnts?.lnk?.workSpace}}</a>
+                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission
+                        [permission]='myActivityRole'
+                        href="/myActivity">{{resourceService.frmelmnts?.lnk?.myactivity}}</a>
+                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission
+                        [permission]='orgSetupRole' href="/orgType">{{resourceService.frmelmnts?.lbl?.orgtypes}}</a>
+                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission
+                        [permission]='workSpaceRole'
+                        href="/dashboardrm">{{resourceService.frmelmnts?.lnk?.dashbord}}</a>
+                    <a class="item" *ngIf="userProfile?.firstName == 'Test'"
+                        href="/dashboardmr">{{resourceService.frmelmnts?.lnk?.dashbord}}</a>
                     <a class="item" href="/profile">{{resourceService.frmelmnts?.lnk?.profile}}</a>
                     <a class="item" (click)="logout()">{{resourceService.frmelmnts?.lnk?.logout}}</a>
 
@@ -45,10 +58,14 @@
         <ng-template #showLoginBtn>
             <div class="right floated two wide tablet computer only column">
                 <div class="beforelogin ui secondary pointing menu padding-top-10">
-                    <button *ngIf="router.isActive('', true) && exploreButtonVisibility==='true'" class="ui item text-upper-case padding-bottom-20"
-                        routerLink="/explore">{{resourceService.frmelmnts?.lbl?.explore}} {{resourceService.instance}}</button>
-                    <button appTelemetryInteract [telemetryInteractObject]="telemetryInteractObject" [telemetryInteractEdata]="signUpInteractEdata"
-                        *ngIf="enableSignup && router.isActive('', true)" class="ui item padding-bottom-20" routerLink="/signup">{{resourceService.frmelmnts?.btn?.signup}}</button>
+                    <button *ngIf="router.isActive('', true) && exploreButtonVisibility==='true'"
+                        class="ui item text-upper-case padding-bottom-20"
+                        routerLink="/explore">{{resourceService.frmelmnts?.lbl?.explore}}
+                        {{resourceService.instance}}</button>
+                    <button appTelemetryInteract [telemetryInteractObject]="telemetryInteractObject"
+                        [telemetryInteractEdata]="signUpInteractEdata" *ngIf="enableSignup && router.isActive('', true)"
+                        class="ui item padding-bottom-20"
+                        routerLink="/signup">{{resourceService.frmelmnts?.btn?.signup}}</button>
                     <a href="/home" class="sunblogin">
                         <button class="ui item">{{resourceService.frmelmnts?.btn?.login}}</button>
                     </a>
@@ -58,9 +75,13 @@
                 <div class="ui secondary right pointing dropdown" suiDropdown>
                     <i class="large bars icon"></i>
                     <div class="menu" suiDropdownMenu>
-                        <div class="item text-upper-case" *ngIf="router.isActive('', true) && exploreButtonVisibility==='true'" routerLink="/explore">{{resourceService.frmelmnts?.lbl?.explore}} {{resourceService.instance}}</div>
-                        <div class="item" appTelemetryInteract [telemetryInteractObject]="telemetryInteractObject" [telemetryInteractEdata]="signUpInteractEdata"
-                            *ngIf="router.isActive('', true) && enableSignup" routerLink="/signup">{{resourceService.frmelmnts?.btn?.signup}}</div>
+                        <div class="item text-upper-case"
+                            *ngIf="router.isActive('', true) && exploreButtonVisibility==='true'" routerLink="/explore">
+                            {{resourceService.frmelmnts?.lbl?.explore}} {{resourceService.instance}}</div>
+                        <div class="item" appTelemetryInteract [telemetryInteractObject]="telemetryInteractObject"
+                            [telemetryInteractEdata]="signUpInteractEdata"
+                            *ngIf="router.isActive('', true) && enableSignup" routerLink="/signup">
+                            {{resourceService.frmelmnts?.btn?.signup}}</div>
                         <div class="item">
                             <a href="/home" class="sunblogin">
                                 <div class="item">{{resourceService.frmelmnts?.btn?.login}}</div>
@@ -85,15 +106,17 @@
                 <div class="one wide column"></div>
                 <div class="two wide column padding-left-none">
                     <a (click)="navigateToHome()">
-                        <img class="image centered header-logo-before-login padding-top-5" alt={{tenantName}} src="{{logo}}">
+                        <img class="image centered header-logo-before-login padding-top-5" alt={{tenantName}}
+                            src="{{logo}}">
                     </a>
                 </div>
                 <div class="two wide column"></div>
                 <div class="five wide column padding-top-20">
                     <div class="ui search">
                         <div class="searchicon ui icon input width-100">
-                            <input type="text" id="keyword" name="filter_search" title="Search" placeholder="{{resourceService?.frmelmnts?.prmpt?.search}}"
-                                class="searchinput" [(ngModel)]="key" (keyup.enter)="onEnter(key)" />
+                            <input type="text" id="keyword" name="filter_search" title="Search"
+                                placeholder="{{resourceService?.frmelmnts?.prmpt?.search}}" class="searchinput"
+                                [(ngModel)]="key" (keyup.enter)="onEnter(key)" />
                             <i class="circular search link icon" (click)="onEnter(key)"></i>
                         </div>
                     </div>
@@ -101,7 +124,8 @@
                 <div class="one wide column">
                     <div class="beforelogin ui secondary pointing menu right-float">
                         <a href="/home" class="sunblogin padding-top-5">
-                            <button class="ui item padding-right-none">{{resourceService.frmelmnts?.btn?.login}}</button>
+                            <button
+                                class="ui item padding-right-none">{{resourceService.frmelmnts?.btn?.login}}</button>
                         </a>
                     </div>
                 </div>
@@ -129,8 +153,9 @@
             <div class="ui grid margin-none">
                 <div class="twelve wide mobile only column padding-10">
                     <div class="searchicon ui fluid icon input">
-                        <input type="text" id="keyword" name="filter_search" title="Search" placeholder="{{resourceService?.frmelmnts?.prmpt?.search}}"
-                            class="" [(ngModel)]="key" (keyup.enter)="onEnter(key)" />
+                        <input type="text" id="keyword" name="filter_search" title="Search"
+                            placeholder="{{resourceService?.frmelmnts?.prmpt?.search}}" class="" [(ngModel)]="key"
+                            (keyup.enter)="onEnter(key)" />
                         <i class="circular search link icon" (click)="onEnter(key)"></i>
                     </div>
                 </div>
