@@ -215,8 +215,10 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
                                     <a class="dropdown-item" href="/blog">Blog</a>
-                                    <a class="dropdown-item" href="/dashboardrm" *ngIf="userProfile?.firstName == 'Content'">Dashboard</a>
-                                    <a class="dropdown-item" href="/dashboardmr" *ngIf="userProfile?.firstName == 'Test'">Dashboard</a>
+                                    <a class="dropdown-item" href="/dashboardrm"
+                                        *ngIf="userProfile?.firstName == 'Content'">Dashboard</a>
+                                    <a class="dropdown-item" href="/dashboardmr"
+                                        *ngIf="userProfile?.firstName == 'Test'">Dashboard</a>
                                     <a class="dropdown-item" href="/profile">Profile</a>
                                     <a class="dropdown-item scroll" href="javascript:" (click)="logout()">Log Out</a>
                                 </div>
@@ -282,7 +284,70 @@
 
                                 </div>
                                 <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12" style="display:flex;margin-bottom: 16px;">
+                                            <div class="form-group col-md-4 col-sm-4 h5 m-0" style="padding-left:8px;">
+                                                <label class="hd-text">Select Therapeutical Area</label>
+                                                <select name="Select Therapeutical Area" class="form-control">
+                                                    <option value="Urology">Urology</option>
+                                                    <option value="Dental">Dental</option>
+                                                    <option value="Opthamology">Opthamology</option>
+                                                    <option value="Dermatology">Dermatology</option>
+                                                    <option value="Cardiovascular">Cardiovascular</option>
+                                                    <option value="Anti-Diabetic">Anti-Diabetic</option>
+                                                    <option value="Women's Health">Women's Health</option>
+                                                    <option value="CNS">CNS</option>
+                                                    <option value="Nutritionals">Nutritionals</option>
+                                                    <option value="Anti- Allergy">Anti- Allergy</option>
+                                                    <option value="GI & Alimentary">GI & Alimentary</option>
+                                                    <option value="Anti-infectives">Anti-infectives</option>
+                                                    <option value="Pain management and analgesics">Pain management and
+                                                        analgesics</option>
+                                                    <option value="Other therapy areas">Other therapy areas</option>
+
+                                                </select>
+
+                                            </div>
+                                            <div class="form-group col-md-4 col-sm-4 h5 m-0">
+                                                <label class="hd-text">Select Category</label>
+
+                                                <select name="Select Category" class="form-control">
+                                                    <option value="Medical">Medical
+
+                                                    </option>
+                                                    <option value="Marketing">
+                                                        Marketing
+
+                                                    </option>
+                                                    <option value="Soft Skill">
+                                                        Soft Skill
+
+                                                    </option>
+                                                    <option value="Re-Fresher">
+                                                        Re-Fresher
+                                                    </option>
+                                                </select>
+
+                                            </div>
+                                            <div class="form-group col-md-4 col-sm-4 h5 m-0" style="padding-right:0px;">
+                                                <label class="hd-text">Select Product</label>
+
+                                                <select name="Select Product" class="form-control">
+                                                    <option value="Insulikind">Insulikind</option>
+                                                    <option value="Glimestar">Glimestar</option>
+                                                    <option value="Metatime">Metatime</option>
+                                                    <option value="Glykind">Glykind</option>
+                                                    <option value="Voglistar">Voglistar</option>
+                                                    <option value="Piokind">Piokind</option>
+                                                    <option value="Glucomust">Glucomust</option>
+                                                    <option value="Trilglimestar">Trilglimestar</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </div>
                                     <div class="ml-2">
+
                                         <div class="form-group h5 m-0">
                                             <input type="text" name="FirstName" value="Title" class="form-control">
                                         </div>
@@ -519,19 +584,17 @@
                                 <img src="./assets/mankind/images/mankind-logo.jpg" alt="" class="img-fluid">
                             </a>
                         </h2>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem
-                            aperiam,
-                            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                            explicabo.</p>
+                        <p>"Mission - We provide Cost Effective, Innovation based Superior Quality Pharmaceutical
+                            Products across the Globe, that improve the lives of the Patients. Vision - To be a Global
+                            Pharmaceutical Company, Most Admired for its affordability, Quality and Accessbility of
+                            Products."</p>
                     </div>
                     <div class="col-md-4 w3l-footer my-md-0 my-4">
                         <h3 class="mb-sm-3 mb-2 text-white">Address</h3>
                         <ul class="list-unstyled">
                             <li>
                                 <i class="fas fa-location-arrow float-left"></i>
-                                <p class="ml-4">The company name
-                                    <span>Lorem ipsum dolor,</span>208, Okhla Industrial Estate,
+                                <p class="ml-4">208, Okhla Industrial Estate,
                                     Phase III, New Delhi - 110020</p>
                                 <div class="clearfix"></div>
                             </li>

@@ -13,3 +13,10 @@ a.text-dark:hover, a.text-dark:focus {
 textarea {
     resize: none;
 }
+
+.form-group label {
+    text-align: left;
+    color: #616161;
+    font-size: 13px;
+    padding-bottom: 5px;
+}
