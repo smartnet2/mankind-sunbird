@@ -21,11 +21,13 @@
                         <div class="content">
                             <div class="textcontent">
                                 <i class='my-icon file text outline icon'></i>
-                                <span class="my-text">{{resourceService?.frmelmnts?.lbl?.course}}</span>
+                                <!-- <span class="my-text">{{resourceService?.frmelmnts?.lbl?.course}}</span> -->
+                                <span class="my-text">Curriculum</span>
                             </div>
                         </div>
                     </div>
-                    <p class="workspaceinstuction">{{resourceService?.frmelmnts?.lbl?.coursedescription}}</p>
+                    <!-- <p class="workspaceinstuction">{{resourceService?.frmelmnts?.lbl?.coursedescription}}</p> -->
+                    <p class="workspaceinstuction">{{resourceService?.frmelmnts?.lbl?.curriculumdescription}}</p>
                 </div>
                 <div class="three wide column" *ngIf='permissionService.permissionAvailable' appPermission 
                     [permission]='lessonRole'>
