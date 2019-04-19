@@ -93,107 +93,89 @@
                                 <div class="dropdown">
                                     <a href=javascript: class="nav-link" data-toggle="dropdown" aria-expanded="false">
                                         <i class="fa fa-bell" aria-hidden="true"></i>
-                                        <span class="badge badge-pill badge-pink">4</span>
+                                        <span class="badge badge-pill badge-pink">1</span>
                                     </a>
 
                                     <ul class="dropdown-menu dropdown-menu-right dropdown-lg user-list notify-list">
-                                        <li class="list-group notification-list m-b-0">
+                                        <li class="list-group notification-list m-b-0" style="height: 70px;">
                                             <div class="slimScrollDiv"
-                                                style="position: relative; overflow-y: scroll; width:260px; height: 240px;">
-                                                <div class="slimscroll" style=" width: auto; height: 240px;">
+                                                style="position: relative; overflow-y: scroll; width:260px; height: 70px;">
+                                                <div class="slimscroll" style=" width: auto; height: 70px;">
                                                     <!-- list item-->
-                                                    <a href="javascript:void(0);" class="list-group-item">
+                                                    <a href="/workspace/content/create" class="list-group-item"
+                                                        *ngIf="userProfile?.userName === 'medicalmgr'">
                                                         <div class="media">
                                                             <div class="media-left p-r-10">
                                                                 <em class="fa fa-diamond bg-primary"></em>
                                                             </div>
                                                             <div class="media-body">
-                                                                <h5 class="media-heading">A new order has been placed A
-                                                                    new order has been placed</h5>
+                                                                <h5 class="media-heading">A new curriculum has been
+                                                                    created.</h5>
                                                                 <p class="m-0">
-                                                                    There are new settings available
+                                                                    Please create the course content assigned to you.
                                                                 </p>
                                                             </div>
                                                         </div>
                                                     </a>
-
                                                     <!-- list item-->
-                                                    <a href="javascript:void(0);" class="list-group-item">
-                                                        <div class="media">
-                                                            <div class="media-left p-r-10">
-                                                                <em class="fa fa-cog bg-warning"></em>
-                                                            </div>
-                                                            <div class="media-body">
-                                                                <h5 class="media-heading">New settings</h5>
-                                                                <p class="m-0">
-                                                                    There are new settings available
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-
-                                                    <!-- list item-->
-                                                    <a href="javascript:void(0);" class="list-group-item">
-                                                        <div class="media">
-                                                            <div class="media-left p-r-10">
-                                                                <em class="fa fa-bell-o bg-custom"></em>
-                                                            </div>
-                                                            <div class="media-body">
-                                                                <h5 class="media-heading">Updates</h5>
-                                                                <p class="m-0">
-                                                                    There are <span
-                                                                        class="text-primary font-600">2</span> new
-                                                                    updates available
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-
-                                                    <!-- list item-->
-                                                    <a href="javascript:void(0);" class="list-group-item">
-                                                        <div class="media">
-                                                            <div class="media-left p-r-10">
-                                                                <em class="fa fa-user-plus bg-danger"></em>
-                                                            </div>
-                                                            <div class="media-body">
-                                                                <h5 class="media-heading">New user registered</h5>
-                                                                <p class="m-0">
-                                                                    You have 10 unread messages
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-
-                                                    <!-- list item-->
-                                                    <a href="javascript:void(0);" class="list-group-item">
+                                                    <a href="/workspace/content/create" class="list-group-item"
+                                                        *ngIf="userProfile?.userName === 'buhead'">
                                                         <div class="media">
                                                             <div class="media-left p-r-10">
                                                                 <em class="fa fa-diamond bg-primary"></em>
                                                             </div>
                                                             <div class="media-body">
-                                                                <h5 class="media-heading">A new order has been placed A
-                                                                    new order has been placed</h5>
+                                                                <h5 class="media-heading">A new course has been
+                                                                    submitted for your approval.</h5>
                                                                 <p class="m-0">
-                                                                    There are new settings available
+                                                                    Request you to kindly approve it.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <!-- list item-->
+                                                    <a href="/workspace/content/create" class="list-group-item"
+                                                        *ngIf="userProfile?.userName === 'medicalmgr1'">
+                                                        <div class="media">
+                                                            <div class="media-left p-r-10">
+                                                                <em class="fa fa-diamond bg-primary"></em>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <p class="m-0">
+                                                                    Your course has been approved.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <!-- list item-->
+                                                    <a href="/queryone" class="list-group-item"
+                                                        *ngIf="userProfile?.userName === 'responder'">
+                                                        <div class="media">
+                                                            <div class="media-left p-r-10">
+                                                                <em class="fa fa-diamond bg-primary"></em>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <p class="m-0">
+                                                                    A new query has been submitted.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <!-- list item-->
+                                                    <a href="/querytwo" class="list-group-item"
+                                                        *ngIf="userProfile?.userName === 'medrep2'">
+                                                        <div class="media">
+                                                            <div class="media-left p-r-10">
+                                                                <em class="fa fa-diamond bg-primary"></em>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <p class="m-0">
+                                                                    Your Query has been responded.
                                                                 </p>
                                                             </div>
                                                         </div>
                                                     </a>
 
-                                                    <!-- list item-->
-                                                    <a href="javascript:void(0);" class="list-group-item">
-                                                        <div class="media">
-                                                            <div class="media-left p-r-10">
-                                                                <em class="fa fa-cog bg-warning"></em>
-                                                            </div>
-                                                            <div class="media-body">
-                                                                <h5 class="media-heading">New settings</h5>
-                                                                <p class="m-0">
-                                                                    There are new settings available
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </a>
                                                 </div>
                                                 <div class="slimScrollBar"
                                                     style="background: rgb(158, 165, 171); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 121.263px;">
@@ -207,6 +189,7 @@
                                     </ul>
                                 </div>
                             </li>
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href=javascript: id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -214,7 +197,7 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                    <a class="dropdown-item" href="/blog">Blog</a>
+                                    <a class="dropdown-item" href="/blog">Query</a>
                                     <a class="dropdown-item" href="/dashboardrm"
                                         *ngIf="userProfile?.firstName == 'Regional'">Dashboard</a>
                                     <a class="dropdown-item" href="/dashboardmr"

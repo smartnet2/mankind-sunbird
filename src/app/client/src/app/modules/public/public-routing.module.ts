@@ -8,7 +8,7 @@ import {
   PublicCollectionPlayerComponent
 } from './components';
 import { SignupGuard, LandingpageGuard } from './services';
-import { MankindComponent, AboutusComponent, DashboardMR, DashboardRegionalSalesManager, Blog } from './module/mankind';
+import { MankindComponent, AboutusComponent, DashboardMR, DashboardRegionalSalesManager, Blog, Queryone, Querytwo } from './module/mankind';
 
 const routes: Routes = [
   {
@@ -96,6 +96,20 @@ const routes: Routes = [
     path: 'blog', component: Blog, data: {
       telemetry: {
         env: 'public', pageid: 'blog', type: 'view', subtype: 'paginate'
+      }
+    }
+  },
+  {
+    path: 'queryone', component: Queryone, data: {
+      telemetry: {
+        env: 'public', pageid: 'queryone', type: 'view', subtype: 'paginate'
+      }
+    }
+  },
+  {
+    path: 'querytwo', component: Querytwo, data: {
+      telemetry: {
+        env: 'public', pageid: 'querytwo', type: 'view', subtype: 'paginate'
       }
     }
   }

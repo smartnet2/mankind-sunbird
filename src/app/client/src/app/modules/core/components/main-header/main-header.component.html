@@ -19,9 +19,52 @@
         <div class="one wide column">
         </div>
         <div class="one wide column" *ngIf="userService.userid; else showLoginBtn">
-            <i class="float-ContentLeft alarm-icon-header alarm icon large alaramIconColor"></i>
+            <div suiDropdown [(isOpen)]="isOpenNew" class="ui floating dropdown right top pointing
+            header-user-container padding-top-circular-human-icon" id="dropdown-menu-list-header1"
+                style="padding-top: 0px;">
+                <i class="float-ContentLeft alarm-icon-header alarm icon large alaramIconColor"></i>
+                <span class="badge badge-pill badge-pink">1</span>
+                <!-- <img src="{{ userProfile?.avatar || 'assets/images/user_logo.png' | cdnprefixurl}}"
+                    class="ui circular image logged-in-user" /> -->
+                <div class="menu" suiDropdownMenu>
+                    <a class="item" href="/workspace/content/create" *ngIf="userProfile?.userName === 'medicalmgr'">
+                        <p class="m-0 text-info">
+                            A new curriculum has been created.
+                        </p>
+                        <p class="m-0">
+                            Please create the course content assigned to you.
+                        </p>
+                    </a>
+                    <a class="item" href="/workspace/content/create" *ngIf="userProfile?.userName === 'buhead'">
+                        <p class="m-0 text-info">
+                            A new course has been submitted for your approval.
+                        </p>
+                        <p class="m-0">
+                            Request you to kindly approve it.
+                        </p>
+                    </a>
+                    <a class="item" href="/workspace/content/create" *ngIf="userProfile?.userName === 'medicalmgr1'">
+                        <p class="m-0 text-info">
+                            Your course has been approved.
+                        </p>
+                    </a>
+                    <a class="item" href="/queryone" *ngIf="userProfile?.userName === 'responder'">
+                        <p class="m-0 text-info">
+                            A new query has been submitted.
+                        </p>
+                    </a>
+                    <a class="item" href="/querytwo" *ngIf="userProfile?.userName === 'medrep2'">
+                        <p class="m-0 text-info">
+                            Your Query has been responded.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="one wide column" *ngIf="userService.userid; else showLoginBtn">
             <div suiDropdown [(isOpen)]="isOpen" class="ui floating dropdown right top pointing
-                header-user-container padding-top-circular-human-icon" id="dropdown-menu-list-header">
+                header-user-container padding-top-circular-human-icon" id="dropdown-menu-list-header"
+                style="float:left">
                 <img src="{{ userProfile?.avatar || 'assets/images/user_logo.png' | cdnprefixurl}}"
                     class="ui circular image logged-in-user" />
                 <div class="menu" suiDropdownMenu>
@@ -29,10 +72,10 @@
                         {{userProfile?.firstName}}&nbsp;{{userProfile?.lastName}}</div>
                     <div *ngIf='userProfile' class="ui divider"></div>
 
-                    <a class="item" href="/blog">Blog</a>
-                    <a class="item" *ngIf='permissionService.permissionAvailable' appPermission
+                    <a class="item" href="/blog">Query</a>
+                    <!-- <a class="item" *ngIf='permissionService.permissionAvailable' appPermission
                         [permission]='adminDashboard'
-                        href="/orgDashboard">{{resourceService.frmelmnts?.lnk?.dashboard}}</a>
+                        href="/orgDashboard">{{resourceService.frmelmnts?.lnk?.dashboard}}</a> -->
                     <a class="item" *ngIf='permissionService.permissionAvailable' appPermission
                         [permission]='announcementRole'
                         href="/announcement/outbox/1">{{resourceService.frmelmnts?.lnk?.announcement}}</a>
@@ -47,8 +90,10 @@
                     <!-- <a class="item" *ngIf='permissionService.permissionAvailable' appPermission
                         [permission]='workSpaceRole'
                         href="/dashboardrm">{{resourceService.frmelmnts?.lnk?.dashbord}}</a> -->
-                    <a class="item" *ngIf="userProfile?.firstName == 'Regional'" href="/dashboardrm">{{resourceService.frmelmnts?.lnk?.dashbord}}</a>
-                    <a class="item" *ngIf="userProfile?.firstName == 'Medical'" href="/dashboardmr">{{resourceService.frmelmnts?.lnk?.dashbord}}</a>
+                    <a class="item" *ngIf="userProfile?.firstName == 'Regional'"
+                        href="/dashboardrm">{{resourceService.frmelmnts?.lnk?.dashbord}}</a>
+                    <a class="item" *ngIf="userProfile?.firstName == 'Medical'"
+                        href="/dashboardmr">{{resourceService.frmelmnts?.lnk?.dashbord}}</a>
                     <a class="item" href="/profile">{{resourceService.frmelmnts?.lnk?.profile}}</a>
                     <a class="item" (click)="logout()">{{resourceService.frmelmnts?.lnk?.logout}}</a>
 

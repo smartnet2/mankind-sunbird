@@ -1,9 +1,10 @@
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { ResourceService, ConfigService } from '@sunbird/shared';
+import { ResourceService, ConfigService, IUserProfile, IUserData } from '@sunbird/shared';
+import { Subscription } from 'rxjs';
 import { SuiModule } from 'ng2-semantic-ui/dist';
 import { SuiModalService, TemplateModalConfig, ModalTemplate } from 'ng2-semantic-ui';
-import { FrameworkService, PermissionService } from '@sunbird/core';
+import { FrameworkService, PermissionService, UserService } from '@sunbird/core';
 import { IInteractEventInput, IImpressionEventInput } from '@sunbird/telemetry';
 @Component({
   selector: 'app-create-content',
@@ -16,6 +17,9 @@ export class CreateContentComponent implements OnInit {
  roles allowed to create textBookRole
  */
   textBookRole: Array<string>;
+  userProfile: IUserProfile;
+  userDataSubscription: Subscription;
+  public userService: UserService;
   /**
    * courseRole  access roles
   */
@@ -65,8 +69,9 @@ export class CreateContentComponent implements OnInit {
   * @param {ResourceService} resourceService Reference of ResourceService
  */
   constructor(configService: ConfigService, resourceService: ResourceService,
-    frameworkService: FrameworkService, permissionService: PermissionService, private activatedRoute: ActivatedRoute) {
+    frameworkService: FrameworkService, userService: UserService, permissionService: PermissionService, private activatedRoute: ActivatedRoute) {
     this.resourceService = resourceService;
+    this.userService = userService;
     this.frameworkService = frameworkService;
     this.permissionService = permissionService;
     this.configService = configService;
@@ -90,5 +95,11 @@ export class CreateContentComponent implements OnInit {
         uri: this.activatedRoute.snapshot.data.telemetry.uri
       }
     };
+    this.userDataSubscription = this.userService.userData$.subscribe(
+      (user: IUserData) => {
+        if (user && !user.err) {
+          this.userProfile = user.userProfile;
+        }
+      });
   }
 }

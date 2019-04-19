@@ -15,4 +15,7 @@
 a.item{
     font-family: "Raleway", sans-serif !important;
 }
+.ui.top.right.pointing.dropdown>.menu {
+    top:50px;
+}
 /* #MANKIND changes for styles*/

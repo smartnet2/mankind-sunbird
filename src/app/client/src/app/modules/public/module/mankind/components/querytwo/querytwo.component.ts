@@ -16,11 +16,11 @@ import { Subject } from 'rxjs/Subject';
 import { CacheService } from 'ng2-cache-service';
 import { IUserProfile, IUserData } from '@sunbird/shared';
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css']
+  selector: 'app-querytwo',
+  templateUrl: './querytwo.component.html',
+  styleUrls: ['./querytwo.component.css']
 })
-export class Blog implements OnInit, OnDestroy {
+export class Querytwo implements OnInit, OnDestroy {
   /**
    * To show toaster(error, success etc) after any API calls
    */

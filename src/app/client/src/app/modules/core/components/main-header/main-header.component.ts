@@ -42,6 +42,7 @@ export class MainHeaderComponent implements OnInit, OnDestroy {
    * Sui dropdown initiator
    */
   isOpen: boolean;
+  isOpenNew: boolean;
   /**
    * Workspace access roles
    */

@@ -113,6 +113,8 @@ export class AppComponent implements OnInit {
       || _.indexOf(_.split(window.location.href, '/'), 'dashboardmr') > -1
       || _.indexOf(_.split(window.location.href, '/'), 'dashboardrm') > -1
       || _.indexOf(_.split(window.location.href, '/'), 'blog') > -1
+      || _.indexOf(_.split(window.location.href, '/'), 'queryone') > -1
+      || _.indexOf(_.split(window.location.href, '/'), 'querytwo') > -1
       || _.indexOf(_.split(window.location.href, '/'), 'comingsoon') > -1 ?
       false : true;
   }

@@ -16,11 +16,11 @@ import { Subject } from 'rxjs/Subject';
 import { CacheService } from 'ng2-cache-service';
 import { IUserProfile, IUserData } from '@sunbird/shared';
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css']
+  selector: 'app-queryone',
+  templateUrl: './queryone.component.html',
+  styleUrls: ['./queryone.component.css']
 })
-export class Blog implements OnInit, OnDestroy {
+export class Queryone implements OnInit, OnDestroy {
   /**
    * To show toaster(error, success etc) after any API calls
    */
@@ -53,7 +53,7 @@ export class Blog implements OnInit, OnDestroy {
   * no result  message
  */
   public userService: UserService;
-  isDisable: boolean = false;
+  isDisable:boolean=false;
   noResultMessage: INoResultMessage;
   /**
   * Contains result object returned from getPageData API.
@@ -306,7 +306,7 @@ export class Blog implements OnInit, OnDestroy {
       });
   }
   disableFields() {
-    this.isDisable = true;
+    this.isDisable=true;
   }
   getChannelId() {
     this.orgDetailsService.getOrgDetails(this.slug).pipe(
