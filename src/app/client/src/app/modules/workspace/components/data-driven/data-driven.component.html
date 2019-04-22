@@ -3,8 +3,11 @@
         <div class=" margin-bottom-15">
             <div class="ui grid">
                 <div class="eleven wide column">
-                    <span class="ui header">
-                        {{resourceService?.frmelmnts?.lbl[creationFormLable]}}
+                    <span class="ui header" *ngIf="userProfile?.userName == 'trainingmgr'">
+                        Curriculum
+                    </span>
+                    <span class="ui header" *ngIf="userProfile?.userName != 'trainingmgr'">
+                        Course
                     </span>
                 </div>
             </div>
@@ -21,14 +24,19 @@
                             {{resourceService?.frmelmnts?.btn?.startcreating}}
                         </button>
                     </p>
-                    <div [ngSwitch]="creationFormLable">
+                    <div>
+                        <h4 class="text-align-center margin-top-10" *ngIf="userProfile?.userName != 'trainingmgr'">These details can be filled when adding content to Course.</h4>
+                        <h4 class="text-align-center margin-top-10" *ngIf="userProfile?.userName == 'trainingmgr'">These details can be filled when adding content to Curriculum.</h4>
+                    </div>
+                    <!-- <div [ngSwitch]="creationFormLable">
                         <h4 class="text-align-center margin-top-10" *ngSwitchCase="'createtextbook'">{{resourceService?.frmelmnts?.lbl?.bookfillater}}</h4>
                         <h4 class="text-align-center margin-top-10" *ngSwitchCase="'designcourse'">{{resourceService?.frmelmnts?.lbl?.coursefilllater}}</h4>
+                        <h4 class="text-align-center margin-top-10" *ngSwitchCase="'designcurriculum'">{{resourceService?.frmelmnts?.lbl?.coursefilllater}}</h4>
                         <h4 class="text-align-center margin-top-10" *ngSwitchCase="'createcollection'">{{resourceService?.frmelmnts?.lbl?.collectionfillater}}</h4>
                         <h4 class="text-align-center margin-top-10" *ngSwitchCase="'createlessontext'">{{resourceService?.frmelmnts?.lbl?.lessonfillater}}</h4>
                         <h4 class="text-align-center margin-top-10" *ngSwitchCase="'createlessonplan'">{{resourceService?.frmelmnts?.lbl?.lpfilllater}}</h4>
                         <h4 *ngSwitchDefault></h4>
-                    </div>
+                    </div> -->
                     <div>
                         <label>
                             <p class="text-align-center margin-top-10">

@@ -283,130 +283,323 @@
                                 <div class="tab-pane active" id="4">
 
                                     <div class="row border-bottom">
-                                        <div class="col-md-4 col-sm-4 col-lg-4 attn">
-                                            <h5>Days you Attended</h5>
-                                            <p>Least Training</p>
-                                            <h1>05</h1>
-                                        </div>
+
                                         <div class="col-md-4 col-sm-4 col-lg-4">
-                                            <img src="./assets/mankind/images/cal.jpg" alt="" class="img-fluid">
+                                            <img src="./assets/mankind/images/cal.jpg" alt="">
                                         </div>
-                                        <div class="col-md-4 col-sm-4 col-lg-4">
-                                            <p>Training Courses Viewed Each Week</p>
-                                            <div class="col-md-12">
-                                                <div class="week-graph week-w80"><span>15</span></div>
-                                                <div class="week-graph week-w30"><span>7</span></div>
-                                                <div class="week-graph week-w50"><span>10</span></div>
-                                                <div class="week-graph week-w14"><span>3</span></div>
+
+                                        <div class="col-md-8 col-sm-8 col-lg-8">
+                                            <div class="col-md-6 m">
+                                                <div class="card-box" style="width:100%!important;">
+                                                    <div class="col-md-4 col-lg-4" style="float:left; padding:0;"><i
+                                                            class="fa" aria-hidden="true">
+                                                            <img src="./assets/mankind/images/training.png" alt=""
+                                                                style="width:70%;"></i></div>
+                                                    <div class="col-md-8 col-lg-8 " style="float:left;">
+                                                        <h4>Total Training Assigned</h4>
+                                                        <h5>6</h5>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-6 m">
+                                                <div class="card-box" style="width:100%!important;">
+                                                    <div class="col-md-4 col-lg-4" style="float:left; padding:0;"><i
+                                                            class="fa" aria-hidden="true">
+                                                            <img src="./assets/mankind/images/progress.png" alt=""
+                                                                style="width:70%;"></i></div>
+                                                    <div class="col-md-8 col-lg-8 " style="float:left;">
+                                                        <h4>In-Progress</h4>
+                                                        <h5>2</h5>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="col-md-6 m">
+                                                <div class="card-box" style="width:100%!important;">
+                                                    <div class="col-md-4 col-lg-4" style="float:left; padding:0;"><i
+                                                            class="fa" aria-hidden="true">
+                                                            <img src="./assets/mankind/images/not-start.png" alt=""
+                                                                style="width:70%;"></i></div>
+                                                    <div class="col-md-8 col-lg-8 " style="float:left;">
+                                                        <h4>Not Started</h4>
+                                                        <h5>1</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-6 m"  style="margin-top: -18%;">
+                                                <div class="card-box" style="width:100%!important; ">
+                                                    <div class="col-md-4 col-lg-4" style="float:left; padding:0;"><i
+                                                            class="fa" aria-hidden="true">
+                                                            <img src="./assets/mankind/images/completed.png" alt=""
+                                                                style="width:70%;"></i></div>
+                                                    <div class="col-md-8 col-lg-8 " style="float:left;">
+                                                        <h4>Completed</h4>
+                                                        <h5>3</h5>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+
                                     </div>
 
                                     <div class="row border-bottom margin-top">
-                                        <div class="col-md-4 col-sm-4 col-lg-4 attn">
-                                            <h5>Total Training Attended</h5>
+                                        <div class="col-md-9 col-sm-9 col-lg-9 attn">
+                                            <div>
 
-                                            <h1>35</h1>
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-lg-4 attn">
-                                            <h5>Total Training Attended</h5>
-                                            <img src="./assets/mankind/images/cht.jpg" alt="" class="img-fluid">
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-lg-4">
+                                                <table id="datatable" class="table table-striped table-bordered"
+                                                    cellspacing="0" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Product</th>
+                                                            <th>Query Category</th>
+                                                            <th>Query Post Date</th>
+                                                            <th>Response Date</th>
+                                                            <th>Start date</th>
+                                                            <th>Status</th>
+                                                            <th>Description</th>
 
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>Product</th>
+                                                            <th>Query Category</th>
+                                                            <th>Query Post Date</th>
+                                                            <th>Response Date</th>
+                                                            <th>Start date</th>
+                                                            <th>Status</th>
+                                                            <th>Description</th>
+                                                        </tr>
+                                                    </tfoot>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Tiger Nixon</td>
+                                                            <td>System Architect</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>61</td>
+                                                            <td>2011/04/25</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tiger Nixon</td>
+                                                            <td>System Architect</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>61</td>
+                                                            <td>2011/04/25</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tiger Nixon</td>
+                                                            <td>System Architect</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>61</td>
+                                                            <td>2011/04/25</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                </table>
+
+
+
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 col-lg-3">
+                                            <p>Training Courses Viewed Each Week</p>
                                             <div class="col-md-12">
-                                                <div class="week-graph r-circle">
-                                                    <p>Medical</p><span>8</span>
+                                                <div class="week-graph week-w80"><span>15</span>
+                                                    <p class="p">1.Insulikind Drug Administration</p>
                                                 </div>
-                                                <div class="week-graph y-circle">
-                                                    <p>Marketing</p><span>8</span>
+                                                <div class="week-graph week-w30"><span>7</span>
+                                                    <p class="p">2.Insulikind - Clinical Trials</p>
+
                                                 </div>
-                                                <div class="week-graph g-circle">
-                                                    <p>Soft Skill</p><span>3</span>
+                                                <div class="week-graph week-w50"><span>10</span>
+                                                    <p class="p">3.Sales Negotiation</p>
+
                                                 </div>
-                                                <div class="week-graph b-circle">
-                                                    <p>Re-Fresher</p><span>8</span>
+                                                <div class="week-graph week-w14"><span>3</span>
+                                                    <p class="p">4.Understanding Type 2 Diabetes</p>
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
 
 
-                                    <!-- <div class="row border-bottom margin-top">
-                                        <div class="col-md-4 col-sm-4 col-lg-4 attn">
-                                            <h5>Recomended Courses <span class="notifi">7</span></h5>
-                                        </div>
-                                        <div class="row back-color">
-                                            <img src="./assets/mankind/images/reco.jpg" alt="" class="img-fluid">
-
-                                        </div>
-                                    </div> -->
                                 </div>
                                 <div class="tab-pane" id="5">
 
+
                                     <div class="row border-bottom">
-                                        <div class="col-md-4 col-sm-4 col-lg-4 attn">
-                                            <h5>Days you Attended</h5>
-                                            <p>Least Training</p>
-                                            <h1>05</h1>
-                                        </div>
+
                                         <div class="col-md-4 col-sm-4 col-lg-4">
-                                            <div class="pull-left"><input type="text" class="todate"
-                                                    placeholder="To Date" name="fname"></div>
-                                            <div class="pull-left"><input type="text" class="fromdate"
-                                                    placeholder="From Date" name="fname"></div>
-                                            <img src="./assets/mankind/images/cal.jpg" alt="" class="img-fluid">
+                                            <img src="./assets/mankind/images/cal.jpg" alt="">
                                         </div>
-                                        <div class="col-md-4 col-sm-4 col-lg-4">
-                                            <p>Training Courses Viewed Each Week</p>
-                                            <div class="col-md-12">
-                                                <div class="week-graph week-w80"><span>15</span></div>
-                                                <div class="week-graph week-w30"><span>7</span></div>
-                                                <div class="week-graph week-w50"><span>10</span></div>
-                                                <div class="week-graph week-w14"><span>3</span></div>
+
+                                        <div class="col-md-8 col-sm-8 col-lg-8">
+                                            <div class="col-md-6 m">
+                                                <div class="card-box" style="width:100%!important;">
+                                                    <div class="col-md-4 col-lg-4" style="float:left; padding:0;"><i
+                                                            class="fa" aria-hidden="true">
+                                                            <img src="./assets/mankind/images/training.png" alt=""
+                                                                style="width:70%;"></i></div>
+                                                    <div class="col-md-8 col-lg-8 " style="float:left;">
+                                                        <h4>Total Training Assigned</h4>
+                                                        <h5>2</h5>
+                                                    </div>
+                                                </div>
+
                                             </div>
+
+                                            <div class="col-md-6 m">
+                                                <div class="card-box" style="width:100%!important;">
+                                                    <div class="col-md-4 col-lg-4" style="float:left; padding:0;"><i
+                                                            class="fa" aria-hidden="true">
+                                                            <img src="./assets/mankind/images/progress.png" alt=""
+                                                                style="width:70%;"></i></div>
+                                                    <div class="col-md-8 col-lg-8 " style="float:left;">
+                                                        <h4>In-Progress</h4>
+                                                        <h5>5</h5>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-6 m">
+                                                <div class="card-box" style="width:100%!important; ">
+                                                    <div class="col-md-4 col-lg-4" style="float:left; padding:0;"><i
+                                                            class="fa" aria-hidden="true">
+                                                            <img src="./assets/mankind/images/completed.png" alt=""
+                                                                style="width:70%;"></i></div>
+                                                    <div class="col-md-8 col-lg-8 " style="float:left;">
+                                                        <h4>Completed</h4>
+                                                        <h5>8</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 m">
+                                                <div class="card-box" style="width:100%!important;">
+                                                    <div class="col-md-4 col-lg-4" style="float:left; padding:0;"><i
+                                                            class="fa" aria-hidden="true">
+                                                            <img src="./assets/mankind/images/not-start.png" alt=""
+                                                                style="width:70%;"></i></div>
+                                                    <div class="col-md-8 col-lg-8 " style="float:left;">
+                                                        <h4>Not Started</h4>
+                                                        <h5>6</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
                                         </div>
+
                                     </div>
 
                                     <div class="row border-bottom margin-top">
-                                        <div class="col-md-4 col-sm-4 col-lg-4 attn">
-                                            <h5>Total Training Attended</h5>
+                                        <div class="col-md-9 col-sm-9 col-lg-9 attn">
+                                            <div>
 
-                                            <h1>35</h1>
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-lg-4 attn">
-                                            <h5>Total Training Attended</h5>
-                                            <img src="./assets/mankind/images/cht.jpg" alt="" class="img-fluid">
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-lg-4">
+                                                <table id="datatable" class="table table-striped table-bordered"
+                                                    cellspacing="0" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Product</th>
+                                                            <th>Query Category</th>
+                                                            <th>Query Post Date</th>
+                                                            <th>Response Date</th>
+                                                            <th>Start date</th>
+                                                            <th>Status</th>
+                                                            <th>Description</th>
 
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>Product</th>
+                                                            <th>Query Category</th>
+                                                            <th>Query Post Date</th>
+                                                            <th>Response Date</th>
+                                                            <th>Start date</th>
+                                                            <th>Status</th>
+                                                            <th>Description</th>
+                                                        </tr>
+                                                    </tfoot>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Tiger Nixon</td>
+                                                            <td>System Architect</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>61</td>
+                                                            <td>2011/04/25</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tiger Nixon</td>
+                                                            <td>System Architect</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>61</td>
+                                                            <td>2011/04/25</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tiger Nixon</td>
+                                                            <td>System Architect</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>61</td>
+                                                            <td>2011/04/25</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                </table>
+
+
+
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 col-lg-3">
+                                            <p>Training Courses Viewed Each Week</p>
                                             <div class="col-md-12">
-                                                <div class="week-graph r-circle">
-                                                    <p>Medical</p><span>8</span>
+                                                <div class="week-graph week-w80"><span>15</span>
+                                                    <p class="p">1.Insulikind Drug Administration</p>
                                                 </div>
-                                                <div class="week-graph y-circle">
-                                                    <p>Marketing</p><span>8</span>
+                                                <div class="week-graph week-w30"><span>7</span>
+                                                    <p class="p">2.Insulikind - Clinical Trials</p>
+
                                                 </div>
-                                                <div class="week-graph g-circle">
-                                                    <p>Soft Skill</p><span>3</span>
+                                                <div class="week-graph week-w50"><span>10</span>
+                                                    <p class="p">3.Sales Negotiation</p>
+
                                                 </div>
-                                                <div class="week-graph b-circle">
-                                                    <p>Re-Fresher</p><span>8</span>
+                                                <div class="week-graph week-w14"><span>3</span>
+                                                    <p class="p">4.Understanding Type 2 Diabetes</p>
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
-
-
-                                    <!-- <div class="row border-bottom margin-top">
-                                        <div class="col-md-4 col-sm-4 col-lg-4 attn">
-                                            <h5>Recomended Courses <span class="notifi">7</span></h5>
-                                        </div>
-                                        <div class="row back-color">
-                                            <img src="./assets/mankind/images/reco.jpg" alt="" class="img-fluid">
-
-                                        </div>
-                                    </div> -->
 
 
 
@@ -419,50 +612,141 @@
                 <div class="tab-pane" id="2">
                     <div class="row">
                         <div class="container margin-top">
-                            <div class="card-box">
-                                <h4 class="mb-0">PRODUCTS</h4>
-                                <h5 class="mt-0">621</h5>
-                            </div>
-                            <div class="card-box">
-                                <h4 class="mb-0">Queries</h4>
-                                <h5 class="mt-0">1,738</h5>
-                            </div>
-                            <div class="card-box">
-                                <h4 class="mb-0">Total Response</h4>
-                                <h5 class="mt-0">3621</h5>
-                            </div>
-                            <div class="card-box">
-                                <h4 class="mb-0">avg.response Time</h4>
-                                <h5 class="mt-0">0:00:50</h5>
-                            </div>
-                            <div class="card-box">
-                                <h4 class="mb-0">ANNOUNCEMENTS</h4>
-                                <h5 class="mt-0">738</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="container" style="display: -webkit-box;">
-                            <div class="col-md-4 col-lg-4 graph-bx">
-                                <p>PRODUCTS & QUERIES TYPE</p>
-                                <img src="./assets/mankind/images/uro.jpg" alt="">
 
+                            <div class="card-box">
+                                <h4>Total Query</h4>
+                                <h5>23</h5>
                             </div>
-                            <div class="col-md-4 col-lg-4 graph-bx">
-                                <p>QUERY BY CATEGORIE</p>
-                                <img src="./assets/mankind/images/uro2.jpg" alt="">
+                            <div class="card-box">
+                                <h4>Total Response</h4>
+                                <h5>18</h5>
                             </div>
-                            <div class="col-md-4 col-lg-4 graph-bx">
-                                <p>REQUESTER TYPE & PRIORITY</p>
-                                <img src="./assets/mankind/images/uro3.jpg" alt="">
+                            <div class="card-box">
+                                <h4>avg.Response Time</h4>
+                                <h5>04:11:29</h5>
+                            </div>
+                            <div class="card-box">
+                                <h4>Total Broadcast</h4>
+                                <h5>5</h5>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="container">
+                            <div class="col-md-4 col-lg-4 graph-bx">
+                                <p>Products & Query Type</p>
+                                <img src="./assets/mankind/images/uro.jpg" alt="">
+
+                            </div>
+                            <div class="col-md-4 col-lg-4 graph-bx">
+                                <p>Query by Category</p>
+                                <img src="./assets/mankind/images/uro2.jpg" alt="">
+                            </div>
+                            <div class="col-md-4 col-lg-4 graph-bx" style="max-width: 31.3333%">
+                                <p>Mr Recognisation</p>
+                                <img src="./assets/mankind/images/uro3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="width: 100%;">
+                        <div class="container">
                             <div class="col-md-12 col-lg-12 graphline-bx">
-                                <p>PRODUCTS TYPE & CATEGORIE BY HOUR</p>
-                                <img src="./assets/mankind/images/gr.jpg" alt="" width="100%" class="img-fluid">
+
+
+                                <div class="container">
+
+                                    <table id="datatable2" class="table table-striped table-bordered" cellspacing="0"
+                                        width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>Query Category</th>
+                                                <th>Query Post Date</th>
+                                                <th>Response Date</th>
+                                                <th>Start date</th>
+                                                <th>Status</th>
+                                                <th>Description</th>
+
+                                            </tr>
+                                        </thead>
+
+                                        <tfoot>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>Query Category</th>
+                                                <th>Query Post Date</th>
+                                                <th>Response Date</th>
+                                                <th>Start date</th>
+                                                <th>Status</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </tfoot>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+                                                <td>2011/04/25</td>
+                                                <td>$320,800</td>
+                                                <td>$320,800</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+                                                <td>2011/04/25</td>
+                                                <td>$320,800</td>
+                                                <td>$3200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+                                                <td>2011/04/25</td>
+                                                <td>$320,800</td>
+                                                <td>$3200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+                                                <td>2011/04/25</td>
+                                                <td>$320,800</td>
+                                                <td>$3200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+                                                <td>2011/04/25</td>
+                                                <td>$320,800</td>
+                                                <td>$3200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+                                                <td>2011/04/25</td>
+                                                <td>$320,800</td>
+                                                <td>$3200</td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+
+
+
+                                </div>
+
 
                             </div>
 

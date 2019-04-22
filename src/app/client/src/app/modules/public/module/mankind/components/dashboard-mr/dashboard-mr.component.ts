@@ -241,6 +241,11 @@ export class DashboardMR implements OnInit, OnDestroy {
           this.userProfile = user.userProfile;
         }
       });
+      $(function() {
+        (<any>$('#datatable, #datatable1, #datatable2')).dataTable();
+    
+        $("[data-toggle=tooltip]").tooltip();
+      });
   }
 
   prepareVisits(event) {
