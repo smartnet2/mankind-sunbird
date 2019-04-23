@@ -34,7 +34,7 @@ export class CourseConsumptionComponent implements OnDestroy {
   /**
    * Contains time period - last 7days, 14days, and 5weeks
    */
-  timePeriod = '7d';
+  timePeriod = 'fromBegining';
 
   /**
    * Contains selected course identifier
@@ -188,7 +188,7 @@ export class CourseConsumptionComponent implements OnDestroy {
    */
   getDashboardData(timePeriod: string, identifier: string) {
     this.showLoader = true;
-    this.timePeriod = timePeriod ? timePeriod : '7d';
+    this.timePeriod = timePeriod ? timePeriod : 'fromBegining';
     this.identifier = identifier;
     const params = {
       data: {

@@ -37,7 +37,7 @@
         <div class="ui grid centered margin-top-10" *ngIf="batchlist && batchlist.length > 0 && queryParams.batchIdentifier && !showWarningDiv">
           <div class="six wide column">
             <div class="ui text menu float-ContentLeft padding-top-10">
-              <span class="dashBoardMenuItem cursor-pointer active" [ngClass]="{active:queryParams.timePeriod === '7d'}" (click)="setTimePeriod('7d')"
+              <span class="dashBoardMenuItem cursor-pointer" [ngClass]="{active:queryParams.timePeriod === '7d'}" (click)="setTimePeriod('7d')"
               appTelemetryInteract [telemetryInteractObject]="interactObject" [telemetryInteractEdata]="{id:'7d',type:'click',pageid:'course-progress-dashboard'}">
               {{resourceService?.frmelmnts?.lbl?.dashboardsevendaysfilter}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
               <span class="dashBoardMenuItem cursor-pointer" [ngClass]="{active:queryParams.timePeriod === '14d'}" (click)="setTimePeriod('14d')"
@@ -46,7 +46,7 @@
               <span class="dashBoardMenuItem cursor-pointer" [ngClass]="{active:queryParams.timePeriod === '5w'}" (click)="setTimePeriod('5w')"
               appTelemetryInteract [telemetryInteractObject]="interactObject" [telemetryInteractEdata]="{id:'5w',type:'click',pageid:'course-progress-dashboard'}">
               {{resourceService?.frmelmnts?.lbl?.dashboardfiveweeksfilter}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
-              <span class="dashBoardMenuItem cursor-pointer" [ngClass]="{active:queryParams.timePeriod === 'fromBegining'}" (click)="setTimePeriod('fromBegining')"
+              <span class="dashBoardMenuItem cursor-pointer active" [ngClass]="{active:queryParams.timePeriod === 'fromBegining'}" (click)="setTimePeriod('fromBegining')"
               appTelemetryInteract [telemetryInteractObject]="interactObject" [telemetryInteractEdata]="{id:'fromBegining',type:'click',pageid:'course-progress-dashboard'}">
               {{resourceService?.frmelmnts?.lbl?.dashboardfrombeginingfilter}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
             </div>

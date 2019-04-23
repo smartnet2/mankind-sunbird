@@ -343,7 +343,7 @@ export class CourseProgressComponent implements OnInit, OnDestroy {
             this.courseId = bothParams.params.courseId;
             this.batchId = bothParams.params.batchId;
             this.queryParams = { ...bothParams.queryParams };
-            this.queryParams.timePeriod = this.queryParams.timePeriod || '7d';
+            this.queryParams.timePeriod = this.queryParams.timePeriod || 'fromBegining';
 
             // Create the telemetry impression event for course stats page
             this.telemetryImpression = {

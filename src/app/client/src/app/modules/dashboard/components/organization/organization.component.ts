@@ -34,7 +34,7 @@ export class OrganisationComponent implements OnDestroy {
   /**
    * Contains time period - last 7days, 14days, and 5weeks
    */
-  timePeriod = '7d';
+  timePeriod = 'fromBegining';
 
   /**
    * Contains selected course identifier
