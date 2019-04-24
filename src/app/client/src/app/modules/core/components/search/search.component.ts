@@ -74,7 +74,13 @@ export class SearchComponent implements OnInit {
    * it navigate
    */
   onChange() {
-    this.route.navigate([this.search[this.selectedOption], 1]);
+    if (this.selectedOption == "Courses") {
+      this.route.navigateByUrl('/search/Courses/1?sortType=desc&sort_by=createdOn');
+    } else if (this.selectedOption == "Library") {
+      this.route.navigateByUrl('/search/Library/1?sortType=desc&sort_by=createdOn');
+    } else {
+      this.route.navigate([this.search[this.selectedOption], 1]);
+    }
   }
   /**
    * on entering keyword
