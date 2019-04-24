@@ -486,12 +486,12 @@
   "course": {
     "filterType": "course",
     "inPageredirectUrl": "/learn",
-    "searchPageredirectUrl": "/search/Courses/1?sortType=desc&sort_by=createdOn"
+    "searchPageredirectUrl": "/search/Courses/1"
   },
   "library": {
     "filterType": "library",
     "inPageredirectUrl": "/resources",
-    "searchPageredirectUrl": "/search/Library/1?sortType=desc&sort_by=createdOn"
+    "searchPageredirectUrl": "/search/Library/1"
   },
   "challenge": {
     "filterType": "challenge",
